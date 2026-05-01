@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+  <rect width="680" height="680" fill="#2e2e2e"/>
+  <g stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.12">
+    <line x1="0" y1="68" x2="680" y2="68"/><line x1="0" y1="136" x2="680" y2="136"/>
+    <line x1="0" y1="204" x2="680" y2="204"/><line x1="0" y1="272" x2="680" y2="272"/>
+    <line x1="0" y1="340" x2="680" y2="340"/><line x1="0" y1="408" x2="680" y2="408"/>
+    <line x1="0" y1="476" x2="680" y2="476"/><line x1="0" y1="544" x2="680" y2="544"/>
+    <line x1="0" y1="612" x2="680" y2="612"/>
+    <line x1="68"  y1="0" x2="68"  y2="680"/><line x1="136" y1="0" x2="136" y2="680"/>
+    <line x1="204" y1="0" x2="204" y2="680"/><line x1="272" y1="0" x2="272" y2="680"/>
+    <line x1="340" y1="0" x2="340" y2="680"/><line x1="408" y1="0" x2="408" y2="680"/>
+    <line x1="476" y1="0" x2="476" y2="680"/><line x1="544" y1="0" x2="544" y2="680"/>
+    <line x1="612" y1="0" x2="612" y2="680"/>
+  </g>
+  <polygon points="340,60 560,180 560,500 340,620 120,500 120,180" fill="none" stroke="#ffc20f" stroke-width="2.5" stroke-opacity="0.7"/>
+  <text font-family="'Bebas Neue', sans-serif" font-size="260" fill="#f8f8f6" fill-opacity="0.95" x="230" y="438" text-anchor="middle">C</text>
+  <text font-family="'Bebas Neue', sans-serif" font-size="260" fill="#ffc20f" x="450" y="438" text-anchor="middle">S</text>
+</svg>
