@@ -970,108 +970,104 @@
           </p>
         </div>
         <div class="diagram-container reveal" style="width:100%; margin-top:3rem; grid-column: 1 / -1;">
-          <svg width="100%" viewBox="0 0 680 440" role="img">
-            <title>La brecha entre estrategia declarada y cultura vivida</title>
-            <desc>Dos zonas separadas por una brecha: estrategia declarada arriba, cultura vivida abajo.</desc>
-            <defs>
-              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </marker>
-              <linearGradient id="brecha-grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#ffc20f" stop-opacity="0.18"/>
-                <stop offset="100%" stop-color="#ffc20f" stop-opacity="0.04"/>
-              </linearGradient>
-            </defs>
-
-            <!-- ZONA SUPERIOR: Estrategia declarada -->
-            <rect x="40" y="30" width="600" height="120" rx="10" fill="#ffc20f" fill-opacity="0.08" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.5"/>
-            <text font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#ffc20f" fill-opacity="0.8" x="56" y="50">ESTRATEGIA DECLARADA</text>
-
-            <g>
-              <rect x="56" y="62" width="132" height="72" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-              <text font-size="13" font-weight="500" x="122" y="84" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Visión</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="122" y="103">Lo que aspiramos</tspan>
-                <tspan x="122" dy="13">ser</tspan>
-              </text>
-            </g>
-            <g>
-              <rect x="204" y="62" width="132" height="72" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-              <text font-size="13" font-weight="500" x="270" y="84" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Objetivos</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="270" y="103">Lo que queremos</tspan>
-                <tspan x="270" dy="13">lograr</tspan>
-              </text>
-            </g>
-            <g>
-              <rect x="352" y="62" width="132" height="72" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-              <text font-size="13" font-weight="500" x="418" y="84" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Valores</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="418" y="103">Lo que decimos</tspan>
-                <tspan x="418" dy="13">creer</tspan>
-              </text>
-            </g>
-            <g>
-              <rect x="500" y="62" width="132" height="72" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-              <text font-size="13" font-weight="500" x="566" y="84" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Estrategia</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="566" y="103">Lo que realmente</tspan>
-                <tspan x="566" dy="13">hacemos</tspan>
-              </text>
-            </g>
-
-            <!-- BRECHA -->
-            <rect x="40" y="162" width="600" height="64" fill="url(#brecha-grad)"/>
-            <line x1="40" y1="162" x2="640" y2="162" stroke="#ffc20f" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.5"/>
-            <line x1="40" y1="226" x2="640" y2="226" stroke="#ffc20f" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.5"/>
-            <text font-family="'Bebas Neue', sans-serif" font-size="13" letter-spacing="4" fill="#ffc20f" fill-opacity="0.9" x="340" y="188" text-anchor="middle">LA BRECHA</text>
-            <text font-size="11" x="340" y="210" text-anchor="middle" fill="#9a9a9a">Invisible · Costosa · Persistente</text>
-
-            <!-- Flechas -->
-            <line x1="200" y1="162" x2="200" y2="226" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.35" marker-end="url(#arrow)"/>
-            <line x1="340" y1="226" x2="340" y2="162" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.35" marker-end="url(#arrow)"/>
-            <line x1="480" y1="162" x2="480" y2="226" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.35" marker-end="url(#arrow)"/>
-
-            <!-- ZONA INFERIOR: Cultura vivida -->
-            <rect x="40" y="238" width="600" height="120" rx="10" fill="#f8f8f6" fill-opacity="0.04" stroke="#f8f8f6" stroke-width="0.8" stroke-opacity="0.2"/>
-            <text font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#9a9a9a" fill-opacity="0.9" x="56" y="258">CULTURA VIVIDA</text>
-
-            <g>
-              <rect x="56" y="268" width="132" height="72" rx="8" fill="#f8f8f6" fill-opacity="0.09" stroke="#f8f8f6" stroke-width="0.5" stroke-opacity="0.3"/>
-              <text font-size="13" font-weight="500" x="122" y="288" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Hábitos</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="122" y="307">Lo que hacemos</tspan>
-                <tspan x="122" dy="13">siempre</tspan>
-              </text>
-            </g>
-            <g>
-              <rect x="204" y="268" width="132" height="72" rx="8" fill="#f8f8f6" fill-opacity="0.09" stroke="#f8f8f6" stroke-width="0.5" stroke-opacity="0.3"/>
-              <text font-size="13" font-weight="500" x="270" y="288" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Creencias</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="270" y="307">Lo que realmente</tspan>
-                <tspan x="270" dy="13">creemos</tspan>
-              </text>
-            </g>
-            <g>
-              <rect x="352" y="268" width="132" height="72" rx="8" fill="#f8f8f6" fill-opacity="0.09" stroke="#f8f8f6" stroke-width="0.5" stroke-opacity="0.3"/>
-              <text font-size="13" font-weight="500" x="418" y="288" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Decisiones</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="418" y="307">Lo que realmente</tspan>
-                <tspan x="418" dy="13">hacemos</tspan>
-              </text>
-            </g>
-            <g>
-              <rect x="500" y="268" width="132" height="72" rx="8" fill="#f8f8f6" fill-opacity="0.09" stroke="#f8f8f6" stroke-width="0.5" stroke-opacity="0.3"/>
-              <text font-size="13" font-weight="500" x="566" y="288" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Lenguaje</text>
-              <text font-size="10" text-anchor="middle" fill="#9a9a9a">
-                <tspan x="566" y="307">Cómo hablamos</tspan>
-                <tspan x="566" dy="13">de verdad</tspan>
-              </text>
-            </g>
-
-            <!-- Nota al pie -->
-            <text font-size="11" x="340" y="400" text-anchor="middle" fill="#9a9a9a" fill-opacity="0.6">Culture Stratagem diagnostica y cierra esta distancia.</text>
-          </svg>
+          <svg width="100%" viewBox="0 0 680 536" role="img">
+<title>La brecha entre estrategia declarada y cultura vivida</title>
+<desc>Dos zonas separadas por una brecha: estrategia declarada arriba, cultura vivida abajo.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+ 
+<!-- ZONA SUPERIOR: Estrategia Declarada -->
+<rect x="20" y="16" width="640" height="158" rx="10" fill="#ffc20f" fill-opacity="0.08" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.5"/>
+<text font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#ffc20f" fill-opacity="0.8" x="36" y="36">ESTRATEGIA DECLARADA</text>
+ 
+<!-- Visión -->
+<rect x="36" y="46" width="142" height="108" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
+<text font-size="13" font-weight="500" x="107" y="68" text-anchor="middle" fill="#f8f8f6">Visión</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="107" y="86">A dónde decimos</tspan>
+  <tspan x="107" dy="13">que vamos</tspan>
+</text>
+ 
+<!-- Objetivos -->
+<rect x="193" y="46" width="142" height="108" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
+<text font-size="13" font-weight="500" x="264" y="68" text-anchor="middle" fill="#f8f8f6">Objetivos</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="264" y="86">Las apuestas</tspan>
+  <tspan x="264" dy="13">que hacemos</tspan>
+</text>
+ 
+<!-- Valores -->
+<rect x="350" y="46" width="142" height="108" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
+<text font-size="13" font-weight="500" x="421" y="64" text-anchor="middle" fill="#f8f8f6">Valores</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="421" y="80">Lo que enmarcamos</tspan>
+  <tspan x="421" dy="13">y colgamos</tspan>
+  <tspan x="421" dy="13">en la pared</tspan>
+</text>
+ 
+<!-- Estrategia -->
+<rect x="507" y="46" width="133" height="108" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
+<text font-size="13" font-weight="500" x="573" y="68" text-anchor="middle" fill="#f8f8f6">Estrategia</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="573" y="86">Lo que realmente</tspan>
+  <tspan x="573" dy="13">hacemos</tspan>
+</text>
+ 
+<!-- LA BRECHA -->
+<line x1="20" y1="194" x2="660" y2="194" stroke="#ffc20f" stroke-width="1" stroke-dasharray="6 4" stroke-opacity="0.5"/>
+<rect x="20" y="194" width="640" height="88" fill="#ffc20f" fill-opacity="0.04"/>
+<line x1="170" y1="154" x2="170" y2="192" stroke="#ffc20f" stroke-width="1" stroke-opacity="0.4" marker-end="url(#arrow)"/>
+<line x1="340" y1="154" x2="340" y2="192" stroke="#ffc20f" stroke-width="1.5" stroke-opacity="0.7" marker-end="url(#arrow)"/>
+<line x1="510" y1="154" x2="510" y2="192" stroke="#ffc20f" stroke-width="1" stroke-opacity="0.4" marker-end="url(#arrow)"/>
+<text font-family="'Bebas Neue', sans-serif" font-size="19" letter-spacing="5" fill="#ffc20f" fill-opacity="0.85" x="340" y="228" text-anchor="middle">LA BRECHA</text>
+<text font-size="11" fill="#9a9a9a" x="340" y="254" text-anchor="middle" letter-spacing="1">Invisible · Costosa · Persistente</text>
+<line x1="20" y1="282" x2="660" y2="282" stroke="#ffc20f" stroke-width="1" stroke-dasharray="6 4" stroke-opacity="0.5"/>
+ 
+<!-- ZONA INFERIOR: Cultura Vivida -->
+<rect x="20" y="302" width="640" height="190" rx="10" fill="rgba(255,255,255,0.03)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.2"/>
+<text font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#9a9a9a" fill-opacity="0.7" x="36" y="322">CULTURA VIVIDA</text>
+ 
+<!-- Hábitos -->
+<rect x="36" y="330" width="142" height="136" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
+<text font-size="13" font-weight="500" x="107" y="352" text-anchor="middle" fill="#f8f8f6">Hábitos</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="107" y="370">Lo que hacemos y</tspan>
+  <tspan x="107" dy="13">lo que nos</tspan>
+  <tspan x="107" dy="13">permitimos hacer</tspan>
+</text>
+ 
+<!-- Creencias -->
+<rect x="193" y="330" width="142" height="136" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
+<text font-size="13" font-weight="500" x="264" y="352" text-anchor="middle" fill="#f8f8f6">Creencias</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="264" y="368">Lo que viene del corazón</tspan>
+  <tspan x="264" dy="13">no se explica</tspan>
+  <tspan x="264" dy="13">ni se impone</tspan>
+</text>
+ 
+<!-- Decisiones -->
+<rect x="350" y="330" width="142" height="136" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
+<text font-size="13" font-weight="500" x="421" y="352" text-anchor="middle" fill="#f8f8f6">Decisiones</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="421" y="370">Lo que sacrificamos</tspan>
+  <tspan x="421" dy="13">para avanzar</tspan>
+</text>
+ 
+<!-- Lenguaje -->
+<rect x="507" y="330" width="133" height="136" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
+<text font-size="13" font-weight="500" x="573" y="352" text-anchor="middle" fill="#f8f8f6">Lenguaje</text>
+<text font-size="9" text-anchor="middle" fill="#9a9a9a">
+  <tspan x="573" y="368">Lo que transmitimos</tspan>
+  <tspan x="573" dy="13">voluntaria e</tspan>
+  <tspan x="573" dy="13">involuntariamente</tspan>
+</text>
+ 
+<!-- Footer -->
+<text font-size="11" fill="#9a9a9a" fill-opacity="0.55" x="340" y="516" text-anchor="middle">Culture Stratagem diagnostica y cierra esta distancia.</text>
+</svg>
         </div>
       </div>
     </div>
