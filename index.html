@@ -821,6 +821,34 @@
       .belief { padding: 2rem; }
       #contacto .inner { gap: 2.5rem; }
     }
+
+    /* ── LANGUAGE TOGGLE ── */
+    [data-en] { display: none; }
+    body.lang-en [data-es] { display: none; }
+    body.lang-en [data-en] { display: inline; }
+    body.lang-en [data-en-block] { display: block; }
+    [data-en-block] { display: none; }
+    body.lang-en [data-es-block] { display: none; }
+
+    /* SVG text toggle */
+    body.lang-en .svg-es { display: none; }
+    body.lang-en .svg-en { display: inline; }
+    .svg-en { display: none; }
+
+    .lang-btn {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--yellow);
+      border: 1px solid rgba(255,194,15,0.35);
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      background: none;
+      cursor: pointer;
+      font-family: var(--font-display);
+      transition: background 0.2s;
+      margin-left: 0.5rem;
+    }
+    .lang-btn:hover { background: rgba(255,194,15,0.08); }
   </style>
 </head>
 <body>
@@ -857,12 +885,13 @@
         <span class="nav-logo-name">Culture Stratagem</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#problema">El problema</a></li>
-        <li><a href="#metodologia">Metodología</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sebastian">Fundador</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#problema"><span data-es>El problema</span><span data-en>The Problem</span></a></li>
+        <li><a href="#metodologia"><span data-es>Metodología</span><span data-en>Methodology</span></a></li>
+        <li><a href="#servicios"><span data-es>Servicios</span><span data-en>Services</span></a></li>
+        <li><a href="#sebastian"><span data-es>Fundador</span><span data-en>Founder</span></a></li>
+        <li><a href="#contacto"><span data-es>Contacto</span><span data-en>Contact</span></a></li>
       </ul>
+      <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
       <button class="nav-toggle" id="navToggle" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
@@ -872,15 +901,15 @@
   <!-- HERO -->
   <section id="hero">
     <div class="container">
-      <div class="hero-eyebrow">Estrategia declarada · Cultura vivida · La brecha que los separa</div>
+      <div class="hero-eyebrow"><span data-es>Estrategia declarada · Cultura vivida · La brecha que los separa</span><span data-en>Declared strategy · Lived culture · The gap between them</span></div>
       <h1 class="hero-headline">
-        Tu estrategia existe. Tu cultura, también. El problema es que <em>no se hablan.</em>
+        <span data-es>Tu estrategia existe. Tu cultura también. El problema es que <em>no se hablan.</em></span><span data-en>Your strategy exists. So does your culture. The problem is they don't <em>talk to each other.</em></span>
       </h1>
       <p class="hero-sub">
-        La mayoría de las organizaciones tienen una estrategia declarada y una cultura vivida. Son dos cosas distintas. Esa distancia tiene un nombre, tiene un costo y, por primera vez, tiene una metodología para cerrarla.
+        <span data-es>La mayoría de las organizaciones tienen una estrategia declarada y una cultura vivida. Son dos cosas distintas. Esa distancia tiene un nombre, tiene un costo y, por primera vez, tiene una metodología para cerrarla.</span><span data-en>Most organizations have a declared strategy and a lived culture. They are two different things. That distance has a name, a cost, and — for the first time — a methodology to close it.</span>
       </p>
       <a href="#problema" class="hero-cta">
-        Descubre qué nos separa
+        <span data-es>Descubre qué las separa</span><span data-en>Discover what separates them</span>
         <svg width="16" height="8" viewBox="0 0 16 8" fill="none" aria-hidden="true">
           <path d="M0 4H14M14 4L11 1M14 4L11 7" stroke="currentColor" stroke-width="1"/>
         </svg>
@@ -950,99 +979,116 @@
   <!-- EL PROBLEMA -->
   <section id="problema">
     <div class="container">
-      <div class="section-label reveal">El problema</div>
+      <div class="section-label reveal"><span data-es>El problema</span><span data-en>The Problem</span></div>
       <div class="grid">
         <div class="reveal reveal-d1">
-          <h2>Las organizaciones no fracasan por falta de estrategia. Fracasan por exceso de distancia.</h2>
+          <h2><span data-es>Las organizaciones no fracasan por falta de estrategia. Fracasan por exceso de distancia.</span><span data-en>Organizations don't fail for lack of strategy. They fail from <em>too much distance.</em></span></h2>
         </div>
         <div style="display:flex;flex-direction:column;gap:1.5rem;">
           <p class="reveal reveal-d1">
-            Toda organización tiene un tipo cultural dominante y un tipo estratégico declarado. El problema no es no tenerlos. El problema es cuando apuntan en direcciones opuestas, y nadie lo ha nombrado todavía.
+            <span data-es>Toda organización tiene un tipo cultural dominante y un tipo estratégico declarado. El problema no es no tenerlos. El problema es cuando apuntan en direcciones opuestas, y nadie lo ha nombrado todavía.</span><span data-en>Every organization has a dominant cultural type and a declared strategic type. The problem isn't not having them. The problem is when they point in opposite directions, and no one has named it yet.</span>
           </p>
           <blockquote class="highlight-text reveal reveal-d2">
-            "La estrategia vive en las presentaciones. La cultura vive en los pasillos. Cuando esos dos mundos no se hablan, la ejecución se convierte en desgaste."
+            <span data-es>"La estrategia vive en las presentaciones. La cultura vive en los pasillos. Cuando esos dos mundos no se hablan, la ejecución se convierte en desgaste."</span><span data-en>"Strategy lives in presentations. Culture lives in the hallways. When those two worlds don't talk to each other, execution turns into exhaustion."</span>
           </blockquote>
           <p class="reveal reveal-d3">
-            Esa distancia, invisible en los reportes, costosa en la operación, persistente en el tiempo, es exactamente lo que diagnostica y cierra Culture Stratagem. Lo hacemos con rigor metodológico, con escucha real y con las herramientas analíticas que el problema merece.
+            <span data-es>Esa distancia, invisible en los reportes, costosa en la operación, persistente en el tiempo, es exactamente lo que diagnostica y cierra Culture Stratagem. Lo hacemos con rigor metodológico, con escucha real y con las herramientas analíticas que el problema merece.</span><span data-en>That distance — invisible in reports, costly in operations, persistent over time — is exactly what Culture Stratagem diagnoses and closes. We do it with methodological rigor, genuine listening, and the analytical tools the problem deserves.</span>
           </p>
           <p class="reveal reveal-d4">
-            Trabajamos con organizaciones que ya saben que algo no encaja. Que han invertido en estrategia, en cultura, en capacitaciones, y el resultado sigue siendo el mismo. Nuestro trabajo empieza donde terminan los talleres de valores.
+            <span data-es>Trabajamos con organizaciones que ya saben que algo no encaja. Que han invertido en estrategia, en cultura, en capacitaciones, y el resultado sigue siendo el mismo. Nuestro trabajo empieza donde terminan los talleres de valores.</span><span data-en>We work with organizations that already know something isn't working. That have invested in strategy, culture, and training programs, and still get the same result. Our work begins where values workshops end.</span>
           </p>
         </div>
         <div class="diagram-container reveal" style="width:100%; margin-top:3rem; grid-column: 1 / -1;">
          <svg width="100%" viewBox="0 0 680 440" role="img">
-<title>La brecha entre estrategia declarada y cultura vivida</title>
+<title class="svg-es">La brecha entre estrategia declarada y cultura vivida</title>
+<title class="svg-en">The gap between declared strategy and lived culture</title>
 <desc>Dos zonas separadas por una brecha con flechas bidireccionales</desc>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
 <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </marker>
 </defs>
- 
+
 <!-- ZONA SUPERIOR -->
 <rect x="20" y="16" width="640" height="128" rx="10" fill="#ffc20f" fill-opacity="0.08" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.5"/>
-<text font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#ffc20f" fill-opacity="0.8" x="36" y="36">ESTRATEGIA DECLARADA</text>
- 
-<!-- Visión -->
+<text class="svg-es" font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#ffc20f" fill-opacity="0.8" x="36" y="36">ESTRATEGIA DECLARADA</text>
+<text class="svg-en" font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#ffc20f" fill-opacity="0.8" x="36" y="36">DECLARED STRATEGY</text>
+
+<!-- Visión / Vision -->
 <rect x="36" y="44" width="142" height="82" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-<text font-size="13" font-weight="500" x="107" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Visión</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="107" y="86">A dónde decimos</tspan><tspan x="107" dy="12">que vamos</tspan></text>
- 
-<!-- Objetivos -->
+<text class="svg-es" font-size="13" font-weight="500" x="107" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Visión</text>
+<text class="svg-en" font-size="13" font-weight="500" x="107" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Vision</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="107" y="86">A dónde decimos</tspan><tspan x="107" dy="12">que vamos</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="107" y="86">Where we say</tspan><tspan x="107" dy="12">we're headed</tspan></text>
+
+<!-- Objetivos / Objectives -->
 <rect x="193" y="44" width="142" height="82" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-<text font-size="13" font-weight="500" x="264" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Objetivos</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="264" y="86">Las apuestas</tspan><tspan x="264" dy="12">que hacemos</tspan></text>
- 
-<!-- Valores -->
+<text class="svg-es" font-size="13" font-weight="500" x="264" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Objetivos</text>
+<text class="svg-en" font-size="13" font-weight="500" x="264" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Objectives</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="264" y="86">Las apuestas</tspan><tspan x="264" dy="12">que hacemos</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="264" y="86">The bets</tspan><tspan x="264" dy="12">we're making</tspan></text>
+
+<!-- Valores / Values -->
 <rect x="350" y="44" width="142" height="82" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-<text font-size="13" font-weight="500" x="421" y="62" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Valores</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="421" y="82">Lo que declaramos</tspan><tspan x="421" dy="12">creer</tspan></text>
- 
-<!-- Estrategia -->
+<text class="svg-es" font-size="13" font-weight="500" x="421" y="62" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Valores</text>
+<text class="svg-en" font-size="13" font-weight="500" x="421" y="62" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Values</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="421" y="76">Lo que enmarcamos</tspan><tspan x="421" dy="12">y colgamos</tspan><tspan x="421" dy="12">en la pared</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="421" y="76">What we frame</tspan><tspan x="421" dy="12">and hang</tspan><tspan x="421" dy="12">on the wall</tspan></text>
+
+<!-- Estrategia / Strategy -->
 <rect x="507" y="44" width="133" height="82" rx="8" fill="#ffc20f" fill-opacity="0.12" stroke="#ffc20f" stroke-width="0.5"/>
-<text font-size="13" font-weight="500" x="573" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Estrategia</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="573" y="86">Lo que realmente</tspan><tspan x="573" dy="12">hacemos</tspan></text>
- 
-<!-- LA BRECHA -->
+<text class="svg-es" font-size="13" font-weight="500" x="573" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Estrategia</text>
+<text class="svg-en" font-size="13" font-weight="500" x="573" y="68" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Strategy</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="573" y="86">Lo que realmente</tspan><tspan x="573" dy="12">hacemos</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="573" y="86">What we</tspan><tspan x="573" dy="12">actually do</tspan></text>
+
+<!-- LA BRECHA / THE GAP -->
 <line x1="20" y1="152" x2="660" y2="152" stroke="#ffc20f" stroke-width="1" stroke-dasharray="6 4" stroke-opacity="0.5"/>
 <rect x="20" y="152" width="640" height="92" fill="#ffc20f" fill-opacity="0.04"/>
- 
-<!-- Flecha UP (izquierda) -->
 <line x1="192" y1="232" x2="192" y2="160" stroke="#ffc20f" stroke-width="1" stroke-opacity="0.45" marker-end="url(#arrow)"/>
-<!-- Flecha DOWN (centro, principal) -->
 <line x1="340" y1="160" x2="340" y2="232" stroke="#ffc20f" stroke-width="1.8" stroke-opacity="0.8" marker-end="url(#arrow)"/>
-<!-- Flecha DOWN (derecha) -->
 <line x1="488" y1="160" x2="488" y2="232" stroke="#ffc20f" stroke-width="1" stroke-opacity="0.45" marker-end="url(#arrow)"/>
- 
-<text font-family="'Bebas Neue', sans-serif" font-size="19" letter-spacing="5" fill="#ffc20f" fill-opacity="0.85" x="340" y="196" text-anchor="middle">LA BRECHA</text>
-<text font-size="11" fill="#9a9a9a" x="340" y="220" text-anchor="middle" letter-spacing="1">Invisible · Costosa · Persistente</text>
+<text class="svg-es" font-family="'Bebas Neue', sans-serif" font-size="19" letter-spacing="5" fill="#ffc20f" fill-opacity="0.85" x="340" y="196" text-anchor="middle">LA BRECHA</text>
+<text class="svg-en" font-family="'Bebas Neue', sans-serif" font-size="19" letter-spacing="5" fill="#ffc20f" fill-opacity="0.85" x="340" y="196" text-anchor="middle">THE GAP</text>
+<text class="svg-es" font-size="11" fill="#9a9a9a" x="340" y="220" text-anchor="middle" letter-spacing="1">Invisible · Costosa · Persistente</text>
+<text class="svg-en" font-size="11" fill="#9a9a9a" x="340" y="220" text-anchor="middle" letter-spacing="1">Invisible · Costly · Persistent</text>
 <line x1="20" y1="244" x2="660" y2="244" stroke="#ffc20f" stroke-width="1" stroke-dasharray="6 4" stroke-opacity="0.5"/>
- 
-<!-- ZONA INFERIOR -->
+
+<!-- ZONA INFERIOR / LIVED CULTURE -->
 <rect x="20" y="258" width="640" height="138" rx="10" fill="rgba(255,255,255,0.03)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.2"/>
-<text font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#9a9a9a" fill-opacity="0.7" x="36" y="278">CULTURA VIVIDA</text>
- 
-<!-- Hábitos -->
+<text class="svg-es" font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#9a9a9a" fill-opacity="0.7" x="36" y="278">CULTURA VIVIDA</text>
+<text class="svg-en" font-family="'Bebas Neue', sans-serif" font-size="11" letter-spacing="3" fill="#9a9a9a" fill-opacity="0.7" x="36" y="278">LIVED CULTURE</text>
+
+<!-- Hábitos / Habits -->
 <rect x="36" y="288" width="142" height="90" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
-<text font-size="13" font-weight="500" x="107" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Hábitos</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="107" y="332">Lo que hacemos</tspan><tspan x="107" dy="12">siempre</tspan></text>
- 
-<!-- Creencias -->
+<text class="svg-es" font-size="13" font-weight="500" x="107" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Hábitos</text>
+<text class="svg-en" font-size="13" font-weight="500" x="107" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Habits</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="107" y="326">Lo que hacemos y</tspan><tspan x="107" dy="12">lo que nos</tspan><tspan x="107" dy="12">permitimos hacer</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="107" y="326">What we do and</tspan><tspan x="107" dy="12">what we allow</tspan><tspan x="107" dy="12">ourselves to do</tspan></text>
+
+<!-- Creencias / Beliefs -->
 <rect x="193" y="288" width="142" height="90" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
-<text font-size="13" font-weight="500" x="264" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Creencias</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="264" y="326">Lo que viene del corazón</tspan><tspan x="264" dy="12">no se explica</tspan><tspan x="264" dy="12">ni se impone</tspan></text>
- 
-<!-- Decisiones -->
+<text class="svg-es" font-size="13" font-weight="500" x="264" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Creencias</text>
+<text class="svg-en" font-size="13" font-weight="500" x="264" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Beliefs</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="264" y="326">Lo que viene del corazón</tspan><tspan x="264" dy="12">no se explica</tspan><tspan x="264" dy="12">ni se impone</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="264" y="326">What comes from</tspan><tspan x="264" dy="12">the heart needs</tspan><tspan x="264" dy="12">no explanation</tspan></text>
+
+<!-- Decisiones / Decisions -->
 <rect x="350" y="288" width="142" height="90" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
-<text font-size="13" font-weight="500" x="421" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Decisiones</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="421" y="326">Lo que sacrificamos</tspan><tspan x="421" dy="12">para avanzar</tspan></text>
- 
-<!-- Lenguaje -->
+<text class="svg-es" font-size="13" font-weight="500" x="421" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Decisiones</text>
+<text class="svg-en" font-size="13" font-weight="500" x="421" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Decisions</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="421" y="326">Lo que sacrificamos</tspan><tspan x="421" dy="12">para avanzar</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="421" y="326">What we sacrifice</tspan><tspan x="421" dy="12">to move forward</tspan></text>
+
+<!-- Lenguaje / Language -->
 <rect x="507" y="288" width="133" height="90" rx="8" fill="rgba(255,255,255,0.04)" stroke="#ffc20f" stroke-width="0.5" stroke-opacity="0.15"/>
-<text font-size="13" font-weight="500" x="573" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Lenguaje</text>
-<text font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="573" y="326">Lo que transmitimos</tspan><tspan x="573" dy="12">voluntaria e</tspan><tspan x="573" dy="12">involuntariamente</tspan></text>
- 
-<text font-size="11" fill="#9a9a9a" fill-opacity="0.55" x="340" y="422" text-anchor="middle">Culture Stratagem diagnostica y cierra esta distancia.</text>
+<text class="svg-es" font-size="13" font-weight="500" x="573" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Lenguaje</text>
+<text class="svg-en" font-size="13" font-weight="500" x="573" y="310" text-anchor="middle" dominant-baseline="central" fill="#f8f8f6">Language</text>
+<text class="svg-es" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="573" y="326">Lo que transmitimos</tspan><tspan x="573" dy="12">voluntaria e</tspan><tspan x="573" dy="12">involuntariamente</tspan></text>
+<text class="svg-en" font-size="9" text-anchor="middle" fill="#9a9a9a"><tspan x="573" y="326">What we transmit</tspan><tspan x="573" dy="12">knowingly</tspan><tspan x="573" dy="12">and not</tspan></text>
+
+<text class="svg-es" font-size="11" fill="#9a9a9a" fill-opacity="0.55" x="340" y="422" text-anchor="middle">Culture Stratagem diagnostica y cierra esta distancia.</text>
+<text class="svg-en" font-size="11" fill="#9a9a9a" fill-opacity="0.55" x="340" y="422" text-anchor="middle">Culture Stratagem diagnoses and closes this distance.</text>
 </svg>
         </div>
       </div>
@@ -1054,11 +1100,11 @@
   <!-- METODOLOGÍA -->
   <section id="metodologia">
     <div class="container">
-      <div class="section-label reveal">Metodología</div>
-      <h2 class="reveal reveal-d1">Tres fases. Un diagnóstico que no miente.</h2>
+      <div class="section-label reveal"><span data-es>Metodología</span><span data-en>Methodology</span></div>
+      <h2 class="reveal reveal-d1"><span data-es>Tres fases. Un diagnóstico que no miente.</span><span data-en>Three phases. A diagnosis that doesn't lie.</span></h2>
       <blockquote class="method-quote reveal reveal-d2">
-        <p>"Ningún plan de batalla sobrevive al primer contacto con el enemigo."</p>
-        <cite>— Helmuth von Moltke, estratega prusiano, siglo XIX</cite>
+        <p><span data-es>"Ningún plan de batalla sobrevive al primer contacto con el enemigo."</span><span data-en>"No battle plan survives first contact with the enemy."</span></p>
+        <cite>— Helmuth von Moltke, <span data-es>estratega prusiano, siglo XIX</span><span data-en>Prussian strategist, 19th century</span></cite>
       </blockquote>
 
       <div class="diagram-container" style="width:100%; margin: 3rem 0;">
@@ -1107,7 +1153,8 @@
 
           <!-- Encabezado -->
           <text class="header" font-family="'Bebas Neue',sans-serif" font-size="10" letter-spacing="3"
-                fill="#ffc20f" fill-opacity="0.35" x="340" y="22" text-anchor="middle">MAPA · CULTURE STRATAGEM</text>
+                fill="#ffc20f" fill-opacity="0.35" x="340" y="22" text-anchor="middle" class="svg-es">MAPA · CULTURE STRATAGEM</text>
+          <text class="header svg-en" font-family="'Bebas Neue',sans-serif" font-size="10" letter-spacing="3" fill="#ffc20f" fill-opacity="0.35" x="340" y="22" text-anchor="middle">MAP · CULTURE STRATAGEM</text>
           <text class="header" font-size="8.5" fill="#ffc20f" fill-opacity="0.22" x="46"  y="308">4°N 74°W</text>
           <text class="header" font-size="8.5" fill="#ffc20f" fill-opacity="0.22" x="634" y="308" text-anchor="end">LATAM OPS</text>
 
@@ -1118,12 +1165,14 @@
             <text font-family="'Bebas Neue',sans-serif" font-size="9" letter-spacing="2"
                   fill="#ffc20f" fill-opacity="0.5" x="120" y="107" text-anchor="middle">OP · 01</text>
             <text font-family="'Bebas Neue',sans-serif" font-size="22"
-                  fill="#f8f8f6" x="120" y="141" text-anchor="middle">Escuchar</text>
+                  fill="#f8f8f6" x="120" y="141" text-anchor="middle"><tspan class="svg-es">Escuchar</tspan><tspan class="svg-en">Listen</tspan></text>
             <line x1="94" y1="148" x2="146" y2="148" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.45"/>
           </g>
           <g class="label1">
-            <text font-size="10" fill="#9a9a9a" x="120" y="202" text-anchor="middle">Contexto + investigación</text>
-            <text font-size="10" fill="#9a9a9a" x="120" y="214" text-anchor="middle">Lo que la org. dice ser</text>
+            <text class="svg-es" font-size="10" fill="#9a9a9a" x="120" y="202" text-anchor="middle">Contexto + investigación</text>
+            <text class="svg-en" font-size="10" fill="#9a9a9a" x="120" y="202" text-anchor="middle">Context + research</text>
+            <text class="svg-es" font-size="10" fill="#9a9a9a" x="120" y="214" text-anchor="middle">Lo que la org. dice ser</text>
+            <text class="svg-en" font-size="10" fill="#9a9a9a" x="120" y="214" text-anchor="middle">What the org. claims to be</text>
           </g>
 
           <!-- Ruta 01→02: S-curve (baja luego sube) — revelada por clipPath -->
@@ -1133,7 +1182,7 @@
           <circle class="wp1a" cx="203" cy="154" r="3.5" fill="#ffc20f" fill-opacity="0.55"/>
           <circle class="wp1b" cx="257" cy="102" r="3.5" fill="#ffc20f" fill-opacity="0.55"/>
           <text class="rtlabel1" font-size="9.5" fill="#ffc20f" fill-opacity="0.45"
-                x="230" y="248" text-anchor="middle">análisis de campo</text>
+                x="230" y="248" text-anchor="middle"><tspan class="svg-es">análisis de campo</tspan><tspan class="svg-en">field analysis</tspan></text>
 
           <!-- ══ FASE 02 — MAPEAR ══ centro (340, 128) -->
           <g class="hex2">
@@ -1142,12 +1191,14 @@
             <text font-family="'Bebas Neue',sans-serif" font-size="9" letter-spacing="2"
                   fill="#ffc20f" fill-opacity="0.55" x="340" y="107" text-anchor="middle">OP · 02</text>
             <text font-family="'Bebas Neue',sans-serif" font-size="22"
-                  fill="#f8f8f6" x="340" y="141" text-anchor="middle">Mapear</text>
+                  fill="#f8f8f6" x="340" y="141" text-anchor="middle"><tspan class="svg-es">Mapear</tspan><tspan class="svg-en">Map</tspan></text>
             <line x1="314" y1="148" x2="366" y2="148" stroke="#ffc20f" stroke-width="0.8" stroke-opacity="0.65"/>
           </g>
           <g class="label2">
-            <text font-size="10" fill="#9a9a9a" x="340" y="202" text-anchor="middle">Cruce cualitativo</text>
-            <text font-size="10" fill="#9a9a9a" x="340" y="214" text-anchor="middle">y cuantitativo con IA</text>
+            <text class="svg-es" font-size="10" fill="#9a9a9a" x="340" y="202" text-anchor="middle">Cruce cualitativo</text>
+            <text class="svg-en" font-size="10" fill="#9a9a9a" x="340" y="202" text-anchor="middle">Qualitative + quantitative</text>
+            <text class="svg-es" font-size="10" fill="#9a9a9a" x="340" y="214" text-anchor="middle">y cuantitativo con IA</text>
+            <text class="svg-en" font-size="10" fill="#9a9a9a" x="340" y="214" text-anchor="middle">cross-analysis with AI</text>
           </g>
 
           <!-- Ruta 02→03: coseno (sube luego baja) — revelada por clipPath -->
@@ -1158,7 +1209,7 @@
           <circle class="wp2a" cx="416" cy="100" r="3.5" fill="#ffc20f" fill-opacity="0.55"/>
           <circle class="wp2b" cx="484" cy="156" r="3.5" fill="#ffc20f" fill-opacity="0.55"/>
           <text class="rtlabel2" font-size="9.5" fill="#ffc20f" fill-opacity="0.45"
-                x="416" y="78" text-anchor="middle">síntesis estratégica</text>
+                x="416" y="78" text-anchor="middle"><tspan class="svg-es">síntesis estratégica</tspan><tspan class="svg-en">strategic synthesis</tspan></text>
 
           <!-- ══ FASE 03 — MOVER ══ centro (560, 128) -->
           <g class="hex3">
@@ -1167,12 +1218,14 @@
             <text font-family="'Bebas Neue',sans-serif" font-size="9" letter-spacing="2"
                   fill="#ffc20f" fill-opacity="0.65" x="560" y="107" text-anchor="middle">OP · 03</text>
             <text font-family="'Bebas Neue',sans-serif" font-size="22"
-                  fill="#f8f8f6" x="560" y="141" text-anchor="middle">Mover</text>
+                  fill="#f8f8f6" x="560" y="141" text-anchor="middle"><tspan class="svg-es">Mover</tspan><tspan class="svg-en">Move</tspan></text>
             <line x1="534" y1="148" x2="586" y2="148" stroke="#ffc20f" stroke-width="1" stroke-opacity="0.85"/>
           </g>
           <g class="label3">
-            <text font-size="10" fill="#9a9a9a" x="560" y="202" text-anchor="middle">Plan concreto</text>
-            <text font-size="10" fill="#9a9a9a" x="560" y="214" text-anchor="middle">con viabilidad financiera</text>
+            <text class="svg-es" font-size="10" fill="#9a9a9a" x="560" y="202" text-anchor="middle">Plan concreto</text>
+            <text class="svg-en" font-size="10" fill="#9a9a9a" x="560" y="202" text-anchor="middle">Concrete plan</text>
+            <text class="svg-es" font-size="10" fill="#9a9a9a" x="560" y="214" text-anchor="middle">con viabilidad financiera</text>
+            <text class="svg-en" font-size="10" fill="#9a9a9a" x="560" y="214" text-anchor="middle">with financial viability</text>
           </g>
 
           <!-- Ruta final: hex3 → mástil de bandera -->
@@ -1183,7 +1236,8 @@
           <g class="bandera">
             <line x1="652" y1="106" x2="652" y2="170" stroke="#ffc20f" stroke-width="1.2" stroke-opacity="0.65"/>
             <polygon points="652,106 678,116 652,126" fill="#ffc20f" fill-opacity="0.75"/>
-            <text font-size="9.5" fill="#ffc20f" fill-opacity="0.75" x="652" y="184" text-anchor="middle">Objetivo</text>
+            <text class="svg-es" font-size="9.5" fill="#ffc20f" fill-opacity="0.75" x="652" y="184" text-anchor="middle">Objetivo</text>
+            <text class="svg-en" font-size="9.5" fill="#ffc20f" fill-opacity="0.75" x="652" y="184" text-anchor="middle">Objective</text>
           </g>
         </svg>
 
@@ -1272,28 +1326,41 @@
           }, { threshold: 0.25 });
 
           mapaObserver.observe(document.getElementById('mapa'));
-        </script>
+      
+    // Language toggle
+    const langBtn = document.getElementById('langBtn');
+    const savedLang = localStorage.getItem('cs-lang');
+    if (savedLang === 'en') {
+      document.body.classList.add('lang-en');
+      langBtn.textContent = 'ES';
+    }
+    langBtn.addEventListener('click', () => {
+      const isEN = document.body.classList.toggle('lang-en');
+      langBtn.textContent = isEN ? 'ES' : 'EN';
+      localStorage.setItem('cs-lang', isEN ? 'en' : 'es');
+    });
+  </script>
 
       </div>
 
       <div class="phases">
         <div class="phase reveal reveal-d1">
           <div class="phase-number">01</div>
-          <div class="phase-subtitle">Primera fase</div>
-          <h3 class="phase-title">Escuchar</h3>
-          <p>Todo diagnóstico honesto empieza con escuchar. Revisamos la plataforma estratégica, los valores declarados, la cultura oficial, todo lo que la organización dice ser. Ese es el mapa. La investigación de campo es el territorio. Y el territorio siempre tiene más verdad que el mapa.</p>
+          <div class="phase-subtitle"><span data-es>Primera fase</span><span data-en>First phase</span></div>
+          <h3 class="phase-title"><span data-es>Escuchar</span><span data-en>Listen</span></h3>
+          <p><span data-es>Todo diagnóstico honesto empieza con escuchar. Revisamos la plataforma estratégica, los valores declarados, la cultura oficial, todo lo que la organización dice ser. Ese es el mapa. La investigación de campo es el territorio. Y el territorio siempre tiene más verdad que el mapa.</span><span data-en>Every honest diagnosis starts with listening. We review the strategic platform, declared values, official culture — everything the organization claims to be. That is the map. Field research is the territory. And the territory always holds more truth than the map.</span></p>
         </div>
         <div class="phase reveal reveal-d2">
           <div class="phase-number">02</div>
-          <div class="phase-subtitle">Segunda fase</div>
-          <h3 class="phase-title">Mapear</h3>
-          <p>Cruzamos lo que las personas dicen con lo que los datos revelan. Usamos tecnología de análisis de lenguaje de última generación para encontrar patrones que ninguna reunión de liderazgo ha podido ver, porque están escondidos en cómo habla la organización, no en lo que declara. La brecha no se intuye. Se mide.</p>
+          <div class="phase-subtitle"><span data-es>Segunda fase</span><span data-en>Second phase</span></div>
+          <h3 class="phase-title"><span data-es>Mapear</span><span data-en>Map</span></h3>
+          <p><span data-es>Cruzamos lo que las personas dicen con lo que los datos revelan. Usamos tecnología de análisis de lenguaje de última generación para encontrar patrones que ninguna reunión de liderazgo ha podido ver, porque están escondidos en cómo habla la organización, no en lo que declara. La brecha no se intuye. Se mide.</span><span data-en>We cross-reference what people say with what the data reveals. We use state-of-the-art language analysis technology to find patterns no leadership meeting has ever seen — hidden in how the organization speaks, not in what it declares. The gap isn't intuited. It's measured.</span></p>
         </div>
         <div class="phase reveal reveal-d3">
           <div class="phase-number">03</div>
-          <div class="phase-subtitle">Tercera fase</div>
-          <h3 class="phase-title">Mover</h3>
-          <p>Un diagnóstico que no mueve nada es un gasto disfrazado de inversión. Por eso entregamos un plan de acción concreto, con iniciativas priorizadas, responsables claros y viabilidad financiera evaluada. No para que quede en una carpeta. Para que quien decida ejecutarlo sepa exactamente por dónde empezar y cuánto va a costar no hacerlo.</p>
+          <div class="phase-subtitle"><span data-es>Tercera fase</span><span data-en>Third phase</span></div>
+          <h3 class="phase-title"><span data-es>Mover</span><span data-en>Move</span></h3>
+          <p><span data-es>Un diagnóstico que no mueve nada es un gasto disfrazado de inversión. Por eso entregamos un plan de acción concreto, con iniciativas priorizadas, responsables claros y viabilidad financiera evaluada. No para que quede en una carpeta. Para que quien decida ejecutarlo sepa exactamente por dónde empezar y cuánto va a costar no hacerlo.</span><span data-en>A diagnosis that moves nothing is an expense disguised as investment. That's why we deliver a concrete action plan — with prioritized initiatives, clear ownership, and financial viability assessed. Not to sit in a folder. For whoever decides to execute it to know exactly where to start, and what it will cost not to.</span></p>
         </div>
       </div>
     </div>
@@ -1304,71 +1371,71 @@
   <!-- SERVICIOS -->
   <section id="servicios">
     <div class="container">
-      <div class="section-label reveal">Servicios</div>
-      <h2 class="reveal reveal-d1">Cuatro formas de entrar. El mismo rigor.</h2>
+      <div class="section-label reveal"><span data-es>Servicios</span><span data-en>Services</span></div>
+      <h2 class="reveal reveal-d1"><span data-es>Cuatro formas de entrar. El mismo rigor.</span><span data-en>Four ways in. The same rigor.</span></h2>
       <div class="cards">
         <div class="service-card reveal reveal-d1">
-          <div class="service-tag">Diagnóstico esencial</div>
-          <h3 class="service-name">Diagnóstico Estrategia-Cultura</h3>
-          <p class="service-desc">Para organizaciones que necesitan nombrar lo que sienten pero no pueden ver. Combinamos investigación contextual, análisis cualitativo y, cuando el proyecto lo requiere, cuantitativo, para entregar hallazgos claros y recomendaciones accionables.</p>
+          <div class="service-tag"><span data-es>Diagnóstico esencial</span><span data-en>Essential Diagnosis</span></div>
+          <h3 class="service-name"><span data-es>Diagnóstico Estrategia-Cultura</span><span data-en>Strategy–Culture Diagnosis</span></h3>
+          <p class="service-desc"><span data-es>Para organizaciones que necesitan nombrar lo que sienten pero no pueden ver. Combinamos investigación contextual, análisis cualitativo y, cuando el proyecto lo requiere, cuantitativo, para entregar hallazgos claros y recomendaciones accionables.</span><span data-en>For organizations that need to name what they feel but can't see. We combine contextual research, qualitative analysis and — when the project requires it — quantitative analysis, to deliver clear findings and actionable recommendations.</span></p>
           <ul class="service-includes">
-            <li>Investigación contextual (plataforma estratégica, valores declarados, cultura de papel)</li>
-            <li>Entrevistas individuales y grupales en distintos niveles</li>
-            <li>Mapeo de brecha estrategia–cultura</li>
-            <li>Informe de hallazgos con recomendaciones</li>
-            <li>Sesión de presentación con equipo directivo</li>
+            <li><span data-es>Investigación contextual (plataforma estratégica, valores declarados, cultura de papel)</span><span data-en>Contextual research (strategic platform, declared values, paper culture)</span></li>
+            <li><span data-es>Entrevistas individuales y grupales en distintos niveles</span><span data-en>Individual and group interviews across levels</span></li>
+            <li><span data-es>Mapeo de brecha estrategia–cultura</span><span data-en>Strategy–culture gap mapping</span></li>
+            <li><span data-es>Informe de hallazgos con recomendaciones</span><span data-en>Findings report with recommendations</span></li>
+            <li><span data-es>Sesión de presentación con equipo directivo</span><span data-en>Presentation session with leadership team</span></li>
           </ul>
           <div class="service-price">
-            <span>Inversión definida según alcance y organización.</span>
-            <a href="#contacto" class="service-cta">Conversemos →</a>
+            <span><span data-es>Inversión definida según alcance y organización.</span><span data-en>Investment defined by scope and organization.</span></span>
+            <a href="#contacto" class="service-cta"><span data-es>Conversemos</span><span data-en>Let's talk</span> →</a>
           </div>
         </div>
         <div class="service-card featured reveal reveal-d2">
-          <div class="service-tag">Diagnóstico avanzado</div>
-          <h3 class="service-name">Diagnóstico con IA</h3>
-          <p class="service-desc">El mismo proceso, potenciado con inteligencia artificial y desarrollo de software a medida. Para organizaciones que quieren evidencia cuantificable, no percepciones, de dónde está la brecha y qué tan profunda es.</p>
+          <div class="service-tag"><span data-es>Diagnóstico avanzado</span><span data-en>Advanced Diagnosis</span></div>
+          <h3 class="service-name"><span data-es>Diagnóstico con IA</span><span data-en>AI-Powered Diagnosis</span></h3>
+          <p class="service-desc"><span data-es>El mismo proceso, potenciado con inteligencia artificial y desarrollo de software a medida. Para organizaciones que quieren evidencia cuantificable, no percepciones, de dónde está la brecha y qué tan profunda es.</span><span data-en>The same process, amplified with artificial intelligence and custom software. For organizations that want quantifiable evidence — not perceptions — of where the gap is and how deep it goes.</span></p>
           <ul class="service-includes">
-            <li>Todo lo del Diagnóstico Estrategia-Cultura</li>
-            <li>Análisis de lenguaje con IA sobre transcripciones</li>
-            <li>Mapeo del campo semántico organizacional</li>
-            <li>Índice de distancia estrategia–cultura (cuantificado)</li>
-            <li>Taller de interpretación con equipo directivo</li>
+            <li><span data-es>Todo lo del Diagnóstico Estrategia-Cultura</span><span data-en>Everything in the Strategy–Culture Diagnosis</span></li>
+            <li><span data-es>Análisis de lenguaje con IA sobre transcripciones</span><span data-en>AI language analysis on transcripts</span></li>
+            <li><span data-es>Mapeo del campo semántico organizacional</span><span data-en>Organizational semantic field mapping</span></li>
+            <li><span data-es>Índice de distancia estrategia–cultura (cuantificado)</span><span data-en>Strategy–culture distance index (quantified)</span></li>
+            <li><span data-es>Taller de interpretación con equipo directivo</span><span data-en>Interpretation workshop with leadership team</span></li>
           </ul>
           <div class="service-price">
-            <span>Inversión definida según alcance y organización.</span>
-            <a href="#contacto" class="service-cta">Conversemos →</a>
+            <span><span data-es>Inversión definida según alcance y organización.</span><span data-en>Investment defined by scope and organization.</span></span>
+            <a href="#contacto" class="service-cta"><span data-es>Conversemos</span><span data-en>Let's talk</span> →</a>
           </div>
         </div>
         <div class="service-card reveal reveal-d3">
-          <div class="service-tag">Estrategia organizacional</div>
-          <h3 class="service-name">Direccionamiento Estratégico</h3>
-          <p class="service-desc">Para organizaciones que necesitan claridad sobre a dónde van y cómo van a llegar. Construimos o revisamos la plataforma estratégica asegurándonos de que lo que se declara tenga coherencia con lo que la organización puede realmente ejecutar.</p>
+          <div class="service-tag"><span data-es>Estrategia organizacional</span><span data-en>Organizational Strategy</span></div>
+          <h3 class="service-name"><span data-es>Direccionamiento Estratégico</span><span data-en>Strategic Direction</span></h3>
+          <p class="service-desc"><span data-es>Para organizaciones que necesitan claridad sobre a dónde van y cómo van a llegar. Construimos o revisamos la plataforma estratégica asegurándonos de que lo que se declara tenga coherencia con lo que la organización puede realmente ejecutar.</span><span data-en>For organizations that need clarity on where they're going and how they'll get there. We build or review the strategic platform — making sure what's declared has coherence with what the organization can actually execute.</span></p>
           <ul class="service-includes">
-            <li>Diagnóstico de plataforma estratégica actual</li>
-            <li>Talleres de construcción con equipo directivo</li>
-            <li>Definición de objetivos estratégicos y focos de acción</li>
-            <li>Mapa estratégico con indicadores</li>
-            <li>Alineación con capacidades culturales y operativas</li>
+            <li><span data-es>Diagnóstico de plataforma estratégica actual</span><span data-en>Current strategic platform diagnosis</span></li>
+            <li><span data-es>Talleres de construcción con equipo directivo</span><span data-en>Co-construction workshops with leadership team</span></li>
+            <li><span data-es>Definición de objetivos estratégicos y focos de acción</span><span data-en>Definition of strategic objectives and action focuses</span></li>
+            <li><span data-es>Mapa estratégico con indicadores</span><span data-en>Strategy map with indicators</span></li>
+            <li><span data-es>Alineación con capacidades culturales y operativas</span><span data-en>Alignment with cultural and operational capabilities</span></li>
           </ul>
           <div class="service-price">
-            <span>Inversión definida según alcance y organización.</span>
-            <a href="#contacto" class="service-cta">Conversemos →</a>
+            <span><span data-es>Inversión definida según alcance y organización.</span><span data-en>Investment defined by scope and organization.</span></span>
+            <a href="#contacto" class="service-cta"><span data-es>Conversemos</span><span data-en>Let's talk</span> →</a>
           </div>
         </div>
         <div class="service-card reveal reveal-d4">
-          <div class="service-tag">PETI · PETHR · Planeación de largo plazo</div>
-          <h3 class="service-name">Planes Estratégicos</h3>
-          <p class="service-desc">Para organizaciones que necesitan traducir su estrategia en un plan concreto con horizonte de tiempo, recursos y responsables. Desarrollamos planes estratégicos de tecnología (PETI) y de gestión humana (PETHR), los dos ejes que más frecuentemente quedan desconectados de la estrategia corporativa.</p>
+          <div class="service-tag"><span data-es>PETI · PETHR · Planeación de largo plazo</span><span data-en>PETI · PETHR · Long-term Planning</span></div>
+          <h3 class="service-name"><span data-es>Planes Estratégicos</span><span data-en>Strategic Plans</span></h3>
+          <p class="service-desc"><span data-es>Para organizaciones que necesitan traducir su estrategia en un plan concreto con horizonte de tiempo, recursos y responsables. Desarrollamos planes estratégicos de tecnología (PETI) y de gestión humana (PETHR), los dos ejes que más frecuentemente quedan desconectados de la estrategia corporativa.</span><span data-en>For organizations that need to translate strategy into a concrete plan with a time horizon, resources and ownership. We develop technology strategic plans (PETI) and human capital plans (PETHR) — the two axes most frequently disconnected from corporate strategy.</span></p>
           <ul class="service-includes">
-            <li>Diagnóstico del estado actual (tecnología o gestión humana)</li>
-            <li>Definición de iniciativas estratégicas priorizadas</li>
-            <li>Hoja de ruta con horizonte 3 a 5 años</li>
-            <li>Presupuesto estimado por iniciativa</li>
-            <li>Indicadores de seguimiento y gobierno del plan</li>
+            <li><span data-es>Diagnóstico del estado actual (tecnología o gestión humana)</span><span data-en>Current state diagnosis (technology or human capital)</span></li>
+            <li><span data-es>Definición de iniciativas estratégicas priorizadas</span><span data-en>Prioritized strategic initiative definition</span></li>
+            <li><span data-es>Hoja de ruta con horizonte 3 a 5 años</span><span data-en>Roadmap with 3–5 year horizon</span></li>
+            <li><span data-es>Presupuesto estimado por iniciativa</span><span data-en>Estimated budget per initiative</span></li>
+            <li><span data-es>Indicadores de seguimiento y gobierno del plan</span><span data-en>Monitoring indicators and plan governance</span></li>
           </ul>
           <div class="service-price">
-            <span>Inversión definida según alcance y organización.</span>
-            <a href="#contacto" class="service-cta">Conversemos →</a>
+            <span><span data-es>Inversión definida según alcance y organización.</span><span data-en>Investment defined by scope and organization.</span></span>
+            <a href="#contacto" class="service-cta"><span data-es>Conversemos</span><span data-en>Let's talk</span> →</a>
           </div>
         </div>
       </div>
@@ -1380,23 +1447,25 @@
   <!-- SEBASTIAN -->
   <section id="sebastian">
     <div class="container">
-      <div class="section-label reveal">El fundador</div>
+      <div class="section-label reveal"><span data-es>El fundador</span><span data-en>The Founder</span></div>
       <div class="inner">
         <div class="sebastian-left reveal">
           <h2 class="sebastian-name">Sebastian<br>Fajardo</h2>
           <div class="sebastian-role">
-            Ingeniero Industrial<br>
+            <span data-es>Ingeniero Industrial<br>
             MSc Gerencia Estratégica<br>
-            Investigador
+            Investigador</span><span data-en>Industrial Engineer<br>
+            MSc Strategic Management<br>
+            Researcher</span>
           </div>
         </div>
         <div class="sebastian-right">
           <p class="reveal reveal-d1">
-            Culture Stratagem nace de una investigación de más de una década en organizaciones reales — no desde la vitrina consultora, sino desde adentro. La metodología que la sostiene fue desarrollada y probada en campo para hacer visible lo que ningún taller de valores ha podido nombrar: la distancia entre lo que una organización dice ser y lo que realmente hace.
+            <span data-es>Culture Stratagem nace de una investigación de más de una década en organizaciones reales — no desde la vitrina consultora, sino desde adentro. La metodología que la sostiene fue desarrollada y probada en campo para hacer visible lo que ningún taller de valores ha podido nombrar: la distancia entre lo que una organización dice ser y lo que realmente hace.</span><span data-en>Culture Stratagem was born from more than a decade of research inside real organizations — not from a consulting showcase, but from the inside. The methodology behind it was developed and tested in the field to make visible what no values workshop has ever been able to name: the distance between what an organization claims to be and what it actually does.</span>
           </p>
           <blockquote class="thesis-quote reveal reveal-d2">
-            <p>"Los cambios reales ocurren desde el deseo, el pensamiento y las creencias."</p>
-            <cite>— Sebastian Fajardo, fundador de Culture Stratagem</cite>
+            <p><span data-es>"Los cambios reales ocurren desde el deseo, el pensamiento y las creencias."</span><span data-en>"Real change happens through desire, thought, and beliefs."</span></p>
+            <cite>— Sebastian Fajardo, <span data-es>fundador de</span><span data-en>founder of</span> Culture Stratagem</cite>
           </blockquote>
         </div>
               </div>
@@ -1409,25 +1478,25 @@
   <section id="creencias">
     <div class="container">
       <div class="beliefs-header">
-        <div class="section-label reveal">En lo que creemos</div>
-        <h2 class="reveal reveal-d1">Cuatro verdades que guían cada diagnóstico.</h2>
+        <div class="section-label reveal"><span data-es>En lo que creemos</span><span data-en>What We Believe</span></div>
+        <h2 class="reveal reveal-d1"><span data-es>Cuatro verdades que guían cada diagnóstico.</span><span data-en>Four truths that guide every diagnosis.</span></h2>
       </div>
       <div class="beliefs">
         <div class="belief reveal reveal-d1">
           <div class="belief-number">01</div>
-          <p>Que la cultura no es lo que dice el manual de valores. Es lo que hace la organización cuando nadie la está midiendo. Eso es lo que diagnosticamos.</p>
+          <p><span data-es>Que la cultura no es lo que dice el manual de valores. Es lo que hace la organización cuando nadie la está midiendo. Eso es lo que diagnosticamos.</span><span data-en>Culture is not what the values manual says. It's what the organization does when no one is measuring it. That's what we diagnose.</span></p>
         </div>
         <div class="belief reveal reveal-d2">
           <div class="belief-number">02</div>
-          <p>Que la brecha entre estrategia y cultura no es un problema de comunicación. Es un problema estructural que tiene causas identificables y soluciones concretas.</p>
+          <p><span data-es>Que la brecha entre estrategia y cultura no es un problema de comunicación. Es un problema estructural que tiene causas identificables y soluciones concretas.</span><span data-en>The gap between strategy and culture is not a communication problem. It's a structural problem with identifiable causes and concrete solutions.</span></p>
         </div>
         <div class="belief reveal reveal-d3">
           <div class="belief-number">03</div>
-          <p>Que decirle a una organización lo que quiere escuchar es el peor servicio que puede prestarle un consultor. Nuestra lealtad es con la evidencia, no con la comodidad.</p>
+          <p><span data-es>Que decirle a una organización lo que quiere escuchar es el peor servicio que puede prestarle un consultor. Nuestra lealtad es con la evidencia, no con la comodidad.</span><span data-en>Telling an organization what it wants to hear is the worst service a consultant can offer. Our loyalty is to the evidence, not to comfort.</span></p>
         </div>
         <div class="belief reveal reveal-d4">
           <div class="belief-number">04</div>
-          <p>Que las personas haciendo cosas juntas, con claridad, con confianza, con propósito compartido, producen más transformación real que cualquier metodología diseñada lejos de ellas.</p>
+          <p><span data-es>Que las personas haciendo cosas juntas, con claridad, con confianza, con propósito compartido, producen más transformación real que cualquier metodología diseñada lejos de ellas.</span><span data-en>People doing things together — with clarity, trust, and shared purpose — produce more real transformation than any methodology designed far from them.</span></p>
         </div>
       </div>
     </div>
@@ -1438,10 +1507,10 @@
     <div class="container">
       <div class="inner">
         <div class="left">
-          <div class="section-label reveal">Contacto</div>
-          <h2 class="reveal reveal-d1">¿Lo que leíste nombra algo que llevas tiempo intentando decir?</h2>
+          <div class="section-label reveal"><span data-es>Contacto</span><span data-en>Contact</span></div>
+          <h2 class="reveal reveal-d1"><span data-es>¿Lo que leíste nombra algo que llevas tiempo intentando decir?</span><span data-en>Does what you just read name something you've been trying to say for a while?</span></h2>
           <p class="reveal reveal-d2">
-            Eso es suficiente para empezar. El primer paso no es un diagnóstico, es una conversación donde escuchamos qué está pasando en tu organización y te decimos con honestidad si podemos ayudar.
+            <span data-es>Eso es suficiente para empezar. El primer paso no es un diagnóstico, es una conversación donde escuchamos qué está pasando en tu organización y te decimos con honestidad si podemos ayudar.</span><span data-en>That's enough to start. The first step isn't a diagnosis — it's a conversation where we listen to what's happening in your organization and tell you honestly whether we can help.</span>
           </p>
         </div>
         <div class="contact-right reveal reveal-d2">
@@ -1452,7 +1521,7 @@
             monic@culturestratagem.com
           </a>
           <p class="contact-note">
-            Sin formularios, sin automatizaciones, sin comerciales. Solo Sebastian o Mónica respondiendo directamente. Porque si diagnosticamos brechas de comunicación en otras organizaciones, lo mínimo es no tenerlas en la nuestra.
+            <span data-es>Sin formularios, sin automatizaciones, sin comerciales. Solo Sebastian o Mónica respondiendo directamente. Porque si diagnosticamos brechas de comunicación en otras organizaciones, lo mínimo es no tenerlas en la nuestra.</span><span data-en>No forms, no automations, no sales reps. Just Sebastian or Mónica responding directly. Because if we diagnose communication gaps in other organizations, the least we can do is not have them in our own.</span>
           </p>
         </div>
       </div>
@@ -1489,7 +1558,7 @@
           <line x1="340" y1="175" x2="340" y2="455" stroke="#ffc20f" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="3 6"/>
         </svg>
       </span>
-      <span class="footer-copy">© 2026 — Estrategia y Cultura Organizacional · Bogotá, Colombia</span>
+      <span class="footer-copy"><span data-es>© 2026 — Estrategia y Cultura Organizacional · Bogotá, Colombia</span><span data-en>© 2026 — Strategy and Organizational Culture · Bogotá, Colombia</span></span>
     </div>
   </footer>
 
